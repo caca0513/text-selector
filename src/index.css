@@ -1,13 +1,87 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+svg {
+    border: red dashed 2px;
+    display: block;
+}
+
+rect {
+    /*background-color: white;*/
+    fill: transparent;
+}
+
+.tbox {
+    /*border: red solid 2px;*/
+    stroke: green;
+    stroke-width: 1px;
+}
+
+.tbox:hover, .tbox:active {
+    /*border: red solid 2px;*/
+    stroke: red;
+    stroke-width: 2px;
+}
+
+.dragging {
+    stroke: blue;
+    stroke-width: 1px;
+}
+.resizer {
+    fill: white;
+}
+.selection {
+    stroke: rgb(128, 0, 128);
+    stroke-width: 1px;
+}
+.selection:hover {
+    stroke-width: 2px;
+}
+.selection .border {
+    stroke-dasharray: 5px;
+}
+.selection text {
+    fill: rgba(128, 128, 128, 0.9);
+    /*stroke: purple;*/
+}
+.selection:hover text {
+    fill: black;
+    font-weight: bold;
+    /*stroke: purple;*/
+}
+
+.resizer:hover{
+    cursor: crosshair;
+}
+.delete circle{
+    fill: rgb(218, 55, 218);
+}
+.delete line {
+    stroke: white;
+    /*stroke: rgba(128, 128, 128, 0.9);*/
+    /*stroke-width: 1px;*/
+}
+.delete:hover{
+    cursor: pointer;
+}
+.delete:hover circle{
+    stroke: red;
+    fill: red;
+}
+
+text {
+    text-anchor: middle;
+    font-size: 11px;
+    /*stroke: black;*/
 }
